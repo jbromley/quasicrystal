@@ -58,6 +58,7 @@ void QuasicrystalApp::draw()
     std::cout << "Frame " << ofGetFrameNum() << ": " << frameTime
               << " seconds" << std::endl;
     frameStart_ = now;
+    ofSaveFrame();
 }
 
 //--------------------------------------------------------------
