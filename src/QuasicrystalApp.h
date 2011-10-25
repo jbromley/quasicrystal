@@ -1,6 +1,11 @@
 #pragma once
 
 #include "ofMain.h"
+#include <vector>
+
+
+class CalculateThread;
+
 
 class QuasicrystalApp : public ofBaseApp
 {
@@ -22,10 +27,13 @@ public:
     void gotMessage(ofMessage msg);
 
 private:
+    static const int THREADS;
+
     int k_;
     int stripes_;
     int center_;
     double phase_;
     ofImage img_;
     float frameStart_;
+    std::vector<CalculateThread*> threads_;
 };
